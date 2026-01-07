@@ -1,0 +1,12 @@
+labels:
+  feature: ["type:feature-gap","triage:needed"]
+  integration: ["type:integration-gap","triage:needed"]
+  perf: ["type:perf-gap","triage:needed"]
+  api: ["type:api-contract-gap","triage:needed"]
+backlog_csv: kyra_master_backlog_merged.csv
+gap_id_prefix: K
+rlm_mode: reasoning
+owner_default: "pool"
+priority_default: P2
+language_default: python
+stub_root: stubs/gaps

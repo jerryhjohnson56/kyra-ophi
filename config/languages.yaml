@@ -1,0 +1,18 @@
+
+python:
+  file_globs: ["stub.py"]
+  test: ["python3","-m","pyflakes","{file}"]
+  unit_test_dir: "tests"
+  extra: []
+typescript:
+  file_globs: ["stub.ts"]
+  test: ["node","-e","console.log('ts placeholder ok')"]
+  extra: []
+rust:
+  file_globs: ["src/lib.rs"]
+  test: ["cargo","check"]
+  extra: ["rustup","show"]
+c:
+  file_globs: ["src/main.c"]
+  test: ["make"]
+  extra: []

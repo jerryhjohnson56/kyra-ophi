@@ -1,0 +1,10 @@
+name: API Contract Gap
+description: Contract or schema mismatch
+labels: ["type:api-contract-gap","triage:needed"]
+body:
+  - type: textarea
+    id: schema
+    attributes:
+      label: Expected vs actual schema
+    validations:
+      required: true

@@ -1,0 +1,33 @@
+{
+  "productName": "Kyra Build Control",
+  "identifier": "com.kyra.control",
+  "tauri": {
+    "bundle": {
+      "active": true,
+      "targets": [
+        "dmg",
+        "msi",
+        "appimage"
+      ],
+      "windows": {
+        "certificateThumbprint": "${WIN_CERT_THUMBPRINT:-}"
+      },
+      "macOS": {
+        "entitlements": "entitlements.plist",
+        "exceptionDomain": "*",
+        "signingIdentity": "Developer ID Application",
+        "appleId": "${APPLE_ID:-}",
+        "teamIdentifier": "${APPLE_TEAM_ID:-}"
+      },
+      "linux": {
+        "deb": {
+          "depends": [
+            "libgtk-3-0",
+            "libayatana-appindicator3-1",
+            "librsvg2-2"
+          ]
+        }
+      }
+    }
+  }
+}

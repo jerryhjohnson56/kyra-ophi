@@ -1,0 +1,11 @@
+id: creator_boost
+cpu_quota: 1.0
+llm_cgroup:
+  cpu_quota: 0.95
+  io_weight: 500
+ui_cgroup:
+  cpu_quota: 0.9
+  rt_priority: true
+gpu_policy:
+  background_batch_cap: 2
+  reserve_vram_gb: 1

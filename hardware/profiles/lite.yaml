@@ -1,0 +1,14 @@
+id: lite
+cpu_quota: 0.6
+llm_cgroup:
+  cpu_quota: 0.4
+  io_weight: 100
+ui_cgroup:
+  cpu_quota: 0.9
+  rt_priority: true
+gpu_policy:
+  background_batch_cap: 0
+  reserve_vram_gb: 3
+disable_services:
+  - auralis_studio_daemon
+  - heavy_indexer

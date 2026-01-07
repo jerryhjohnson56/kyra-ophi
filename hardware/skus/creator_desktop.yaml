@@ -1,0 +1,18 @@
+id: kyra_creator_desktop
+name: Kyra Creator Desktop
+segment: consumer_creator
+cpu: 12-core desktop
+gpu: NVIDIA >= RTX 3070 or AMD equivalent (>= 8–10GB VRAM)
+ram_gb: 32
+storage_gb: 2048
+wireless: ["WiFi 6/6E", "BT 5.2"]
+ports: ["USB-C", "USB-A", "HDMI/DP"]
+warranty_months: 24
+os_channel: "stable"
+packs:
+  - base_models
+  - creator_base
+  - sd15
+extras: ["Silent cooling", "High-IO NVMe"]
+power_profile_default: balanced
+power_profiles: ["balanced", "creator_boost", "lite"]

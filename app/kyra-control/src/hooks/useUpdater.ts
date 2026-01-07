@@ -1,0 +1,1 @@
+export { useUpdaterV2 as useUpdater } from "../updater/UpdaterProviderV2";

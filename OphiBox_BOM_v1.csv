@@ -1,0 +1,37 @@
+SKU,Category,Part,Qty,Unit_Cost_USD,Ext_Cost_USD
+Base-RK3588,PCB,"6-8L HDI PCB, impedance controlled",1,14,14
+Base-RK3588,Power,150W external PSU (19V)+ DC-DC VRMs,1,15,15
+Base-RK3588,Enclosure,"Aluminum+ABS, 120mm fan grill",1,18,18
+Base-RK3588,Cooling,92mm PWM fan + heatsinks + pads,1,6,6
+Base-RK3588,Connectivity,GigE PHY + MagJack,1,3.2,3.2
+Base-RK3588,Connectivity,WiFi6/BT module (M.2 or solder),1,10.5,10.5
+Base-RK3588,Storage,eMMC 64GB,1,9.5,9.5
+Base-RK3588,MCU,STM32/ATSAMD for fans/sensors,1,2.2,2.2
+Base-RK3588,Sensors,"Thermals (NTC), hall, light",1,1.2,1.2
+Base-RK3588,Misc,"Connectors, buttons, LEDs, screws",1,4.8,4.8
+Base-RK3588,Video I/O,HDMI 2.0 Rx (w/ HDCP2.2 lic),1,12,12
+Base-RK3588,Video I/O,HDMI 2.0 Tx (w/ HDCP2.2 lic),1,12,12
+Base-RK3588,Video I/O,Retimers/switches/ESD,1,6.5,6.5
+Base-RK3588,Compute,RK3588 SoM (8GB LPDDR4x),1,95,95
+Base-RK3588,Memory,LPDDR adders/PMIC (if not on SoM),1,6,6
+Base-RK3588,Storage,NVMe M.2 slot + connector,1,4.2,4.2
+Base-RK3588,Licenses,HDMI/HDCP per-unit amortization*,1,3.0,3.0
+Base-RK3588,Mfg,SMT assembly + test (est),1,10,10
+Pro-Orin,PCB,"6-8L HDI PCB, impedance controlled",1,18,18
+Pro-Orin,Power,150W external PSU (19V)+ DC-DC VRMs,1,20,20
+Pro-Orin,Enclosure,"Aluminum+ABS, 120mm fan grill",1,22,22
+Pro-Orin,Cooling,92mm PWM fan + heatsinks + pads,1,8,8
+Pro-Orin,Connectivity,GigE PHY + MagJack,1,3.2,3.2
+Pro-Orin,Connectivity,WiFi6/BT module (M.2 or solder),1,10.5,10.5
+Pro-Orin,Storage,eMMC 64GB,1,9.5,9.5
+Pro-Orin,MCU,STM32/ATSAMD for fans/sensors,1,2.2,2.2
+Pro-Orin,Sensors,"Thermals (NTC), hall, light",1,1.2,1.2
+Pro-Orin,Misc,"Connectors, buttons, LEDs, screws",1,4.8,4.8
+Pro-Orin,Video I/O,HDMI 2.0 Rx (w/ HDCP2.2 lic),1,12,12
+Pro-Orin,Video I/O,HDMI 2.0 Tx (w/ HDCP2.2 lic),1,12,12
+Pro-Orin,Video I/O,Retimers/switches/ESD,1,6.5,6.5
+Pro-Orin,Compute,Jetson Orin Nano 8GB module,1,199,199
+Pro-Orin,Memory,LPDDR adders/PMIC (if not on SoM),1,6,6
+Pro-Orin,Storage,NVMe M.2 slot + connector,1,4.2,4.2
+Pro-Orin,Licenses,HDMI/HDCP per-unit amortization*,1,3.0,3.0
+Pro-Orin,Mfg,SMT assembly + test (est),1,12,12

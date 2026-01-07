@@ -1,0 +1,10 @@
+[Unit]
+Description=Kyra Auto-Tune (first boot + weekly)
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/env python3 /opt/kyra/scripts/auto_tune/auto_tune.py --out /var/lib/kyra/auto_profile.yaml
+
+[Install]
+WantedBy=multi-user.target

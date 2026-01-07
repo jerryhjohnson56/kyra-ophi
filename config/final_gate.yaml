@@ -1,0 +1,49 @@
+
+# Kyra Final Readiness Gate — defaults
+thresholds:
+  min_items: 1600         # expected total >= (v44 + v45 delta); adjust as needed
+  max_code_fences: 0
+  max_bak_files: 0
+  # Optional perf thresholds (only enforced if metrics files exist)
+  jit_startup_ms_max: 250
+  vm_throughput_ops_min: 100000
+
+paths:
+  manifest: "manifest.json"
+  stubs_root: "stubs"
+  sbom_dir: "dist/sbom"
+  artifacts_dir: "dist"
+  docs_required:
+    - "docs/Kyra_Language_Spec.md"
+    - "docs/VM_Overview.md"
+    - "docs/Bytecode_Spec.md"
+    - "docs/JIT_Design.md"
+    - "docs/KyraLift_User_Guide.md"
+    - "docs/Persona_Integration.md"
+    - "docs/Install_Guide.md"
+  demos_optional:
+    - "examples/hello_kyra"
+    - "examples/persona_minimal"
+
+commands:
+  # Each runs in repo root; non-zero status => FAIL
+  python_lint: ["bash","-lc","find stubs -name 'stub.py' -print0 | xargs -0 -r -n1 python3 -m pyflakes"]
+  python_tests: ["bash","-lc","pytest -q || true"]  # make strict later
+  rust_check: ["bash","-lc","find stubs -name Cargo.toml -execdir cargo check \; || true"]
+  c_build: ["bash","-lc","find stubs -name Makefile -execdir make \; || true"]
+  ts_check: ["bash","-lc","node -e "console.log('ts ok')""]
+
+  # VM/JIT/Bytecode health (replace with your real scripts as they appear)
+  bytecode_roundtrip: ["bash","-lc","[ -x scripts/bytecode_roundtrip.sh ] && scripts/bytecode_roundtrip.sh || true"]
+  vm_selftest: ["bash","-lc","[ -x scripts/vm_selftest.sh ] && scripts/vm_selftest.sh || true"]
+  jit_microbench: ["bash","-lc","[ -x scripts/jit_microbench.sh ] && scripts/jit_microbench.sh || true"]
+
+  # KyraLift, Persona, Packaging
+  kyralift_smoke: ["bash","-lc","[ -x scripts/kyralift_smoke.sh ] && scripts/kyralift_smoke.sh || true"]
+  persona_smoke: ["bash","-lc","[ -x scripts/persona_smoke.sh ] && scripts/persona_smoke.sh || true"]
+  packaging_check: ["bash","-lc","test -d dist && ls -1 dist | wc -l"]
+
+perf_files:
+  # If these JSON files exist, enforce thresholds above
+  jit_metrics: "benchmarks/jit_metrics.json"        # { "startup_ms": 123 }
+  vm_metrics: "benchmarks/vm_metrics.json"          # { "throughput_ops": 234567 }

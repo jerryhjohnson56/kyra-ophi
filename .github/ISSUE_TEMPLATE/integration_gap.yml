@@ -1,0 +1,10 @@
+name: Integration Gap
+description: Components compile but do not interoperate correctly
+labels: ["type:integration-gap","triage:needed"]
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true

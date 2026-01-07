@@ -1,0 +1,42 @@
+{
+  "productName": "Kyra Build Control",
+  "version": "1.1.0",
+  "identifier": "com.kyra.control",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "tauri": {
+    "windows": [
+      {
+        "title": "Kyra Build Control",
+        "width": 1200,
+        "height": 820
+      }
+    ],
+    "allowlist": {
+      "shell": {
+        "all": false,
+        "open": false,
+        "scope": [
+          {
+            "name": "python3",
+            "cmd": "python3"
+          },
+          {
+            "name": "bash",
+            "cmd": "bash"
+          },
+          {
+            "name": "git",
+            "cmd": "git"
+          },
+          {
+            "name": "gh",
+            "cmd": "gh"
+          }
+        ]
+      }
+    }
+  }
+}

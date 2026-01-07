@@ -1,0 +1,13 @@
+# OphiCache config (sample)
+listen_host: "0.0.0.0"
+listen_port: 7060
+storage_root: "./_ophicache_storage"
+# Upstreams Kyra may use for packs (mirror will fetch+cache from these)
+upstreams:
+  - "https://packs.kyra.example/"
+  - "https://mirror1.kyra.example/"
+  # you can also pre-populate with arbitrary URLs in prefetch.yaml
+gc:
+  max_bytes: 150000000000   # 150 GB
+  high_watermark: 0.90
+  low_watermark: 0.75

@@ -1,0 +1,10 @@
+.ky-banner{background:rgba(30,144,255,.12);border:1px solid rgba(30,144,255,.35);padding:10px 12px;margin:8px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px}
+.ky-btn{border-radius:10px;padding:8px 12px;border:1px solid rgba(0,0,0,.12);cursor:pointer}
+.ky-modal-back{position:fixed;inset:0;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;z-index:9999}
+.ky-modal{background:#111;color:#eee;min-width:420px;max-width:720px;border-radius:16px;padding:18px 18px 12px;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.ky-h1{font-size:18px;font-weight:700;margin:0 0 8px}
+.ky-row{display:flex;gap:10px;align-items:center;justify-content:space-between;margin:6px 0}
+.ky-progress{height:10px;background:#2a2a2a;border-radius:8px;overflow:hidden}
+.ky-progress>div{height:100%;background:#1e90ff;transition:width .2s ease}
+.ky-muted{opacity:.75}
+.ky-log{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;max-height:140px;overflow:auto;background:#0b0b0b;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,.06)}

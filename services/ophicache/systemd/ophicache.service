@@ -1,0 +1,13 @@
+[Unit]
+Description=OphiCache LAN cache
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/kyra-ophicache
+ExecStart=/usr/bin/env python3 services/ophicache/ophicache_server.py --config services/ophicache/config.yaml
+Restart=on-failure
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>local.kyra.ophicache</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/env</string>
+    <string>python3</string>
+    <string>services/ophicache/ophicache_server.py</string>
+    <string>--config</string>
+    <string>services/ophicache/config.yaml</string>
+  </array>
+  <key>WorkingDirectory</key><string>$HOME/kyra-ophicache</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>$HOME/Library/Logs/ophicache.out.log</string>
+  <key>StandardErrorPath</key><string>$HOME/Library/Logs/ophicache.err.log</string>
+</dict>
+</plist>

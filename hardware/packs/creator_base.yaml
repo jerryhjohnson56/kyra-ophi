@@ -1,0 +1,8 @@
+id: creator_base
+name: Creator Base
+includes:
+  - auralis_studio
+  - persona_rig_templates
+  - shaders_basic
+  - overlay_templates
+size_estimate_gb: 3

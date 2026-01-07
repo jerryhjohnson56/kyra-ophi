@@ -1,0 +1,11 @@
+id: balanced
+cpu_quota: 0.7
+llm_cgroup:
+  cpu_quota: 0.6
+  io_weight: 200
+ui_cgroup:
+  cpu_quota: 0.9
+  rt_priority: true
+gpu_policy:
+  background_batch_cap: 1
+  reserve_vram_gb: 2

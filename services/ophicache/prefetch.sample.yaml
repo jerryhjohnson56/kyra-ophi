@@ -1,0 +1,8 @@
+# Items to prefetch into the cache
+items:
+  - url: "https://example.com/models/code-7b-q4.kpack"
+    sha256: "PUT_REAL_SHA256_HERE"
+    name: "code-7b-q4.kpack"
+  - url: "https://example.com/models/chat-7b-q4.kpack"
+    sha256: "PUT_REAL_SHA256_HERE"
+    name: "chat-7b-q4.kpack"

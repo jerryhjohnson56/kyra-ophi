@@ -1,0 +1,18 @@
+id: kyra_server_gpu_node
+name: Kyra Server GPU Node
+segment: server_operator
+cpu: 16+ core server CPU
+gpu: NVIDIA A2000–A5000 / AMD MI2x
+ram_gb: 64
+storage_gb: 2048
+wireless: ["WiFi 6/6E", "BT 5.2"]
+ports: ["USB-C", "USB-A", "HDMI/DP"]
+warranty_months: 24
+os_channel: "stable"
+packs:
+  - base_models
+  - creator_base
+  - sd15
+extras: ["Dual NIC", "Remote management"]
+power_profile_default: balanced
+power_profiles: ["balanced", "creator_boost", "lite"]

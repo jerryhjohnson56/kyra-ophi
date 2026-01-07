@@ -1,0 +1,11 @@
+name: Performance Gap
+description: Measurable perf regression or unmet SLO
+labels: ["type:perf-gap","triage:needed"]
+body:
+  - type: textarea
+    id: benchmark
+    attributes:
+      label: Benchmark evidence
+      placeholder: Include machine profile, dataset, metrics
+    validations:
+      required: true

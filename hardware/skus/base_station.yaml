@@ -1,0 +1,18 @@
+id: kyra_base_station
+name: Kyra Base Station
+segment: home_lab
+cpu: Low power 4-core
+gpu: None
+ram_gb: 8
+storage_gb: 2048
+wireless: ["WiFi 6/6E", "BT 5.2"]
+ports: ["USB-C", "USB-A", "HDMI/DP"]
+warranty_months: 24
+os_channel: "stable"
+packs:
+  - base_models
+  - creator_base
+  - sd15
+extras: ["Model/update cache", "Time Machine/SMB/NFS"]
+power_profile_default: balanced
+power_profiles: ["balanced", "creator_boost", "lite"]

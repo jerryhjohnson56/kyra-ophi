@@ -1,0 +1,46 @@
+name: gh-pages-updates
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download release assets (checksums + installers)
+        uses: robinraju/release-downloader@v1.10
+        with:
+          tag: ${{ github.event.release.tag_name || github.ref_name }}
+          repository: ${{ github.repository }}
+          fileName: "*"
+          out-file-path: relassets
+
+      - name: Build update feed
+        env:
+          GH_OWNER: ${{ github.repository_owner }}
+          GH_REPO: ${{ github.event.repository.name }}
+        run: |
+          mkdir -p dist
+          # Prepare SHA256SUMS if not present
+          if [ ! -f relassets/SHA256SUMS ]; then
+            ( cd relassets && shasum -a 256 * > SHA256SUMS || sha256sum * > SHA256SUMS )
+          fi
+          python3 scripts/release/make_update_feed.py "${{ github.event.release.tag_name || github.ref_name }}" relassets > dist/latest.json
+          cp dist/latest.json dist/${{ github.event.release.tag_name || github.ref_name }}.json
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          destination_dir: updates
+          keep_files: true

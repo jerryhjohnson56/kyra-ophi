@@ -1,0 +1,22 @@
+name: Feature Gap
+description: Missing feature discovered during development or testing
+labels: ["type:feature-gap","triage:needed"]
+body:
+  - type: textarea
+    id: signal
+    attributes:
+      label: Signal (logs, failing tests, user request)
+      placeholder: Paste failing snippet or describe user need
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Area (component/subsystem)
+      placeholder: e.g., runtime/kv, ui/suite, compiler/lowering
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: [P0, P1, P2, P3]
+      default: 1

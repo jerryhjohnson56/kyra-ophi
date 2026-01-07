@@ -1,0 +1,14 @@
+
+enabled: false
+max_loops: 0
+sleep_seconds: 8
+git:
+  username: "YOUR NAME"
+  email: "you@example.com"
+model:
+  cmd: ["ollama","run","qwen2.5-coder:7b"]
+policy:
+  strip_code_fences: true
+  languages: ["python","typescript","rust","c"]
+  stop_on_first_failure: false
+  allow_force_push: true

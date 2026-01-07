@@ -1,0 +1,9 @@
+id: base_models
+name: Base Models
+includes:
+  - chat_7b_q4
+  - code_7b_q4
+  - whisper_medium
+  - tts_small
+  - vad
+size_estimate_gb: 9

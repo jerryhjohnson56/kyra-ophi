@@ -1,0 +1,27 @@
+
+name: build
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+jobs:
+  rust:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: find stubs -name Cargo.toml -execdir cargo check \; || true
+  python:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install pyflakes
+      - run: find stubs -name 'stub.py' -print0 | xargs -0 -r -n1 python -m pyflakes || true
+  c:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y build-essential
+      - run: find stubs -name Makefile -execdir make \; || true

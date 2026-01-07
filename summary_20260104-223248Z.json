@@ -1,0 +1,16 @@
+{
+  "timestamp": "20260104-223248Z",
+  "total_items": 1519,
+  "prev_master": "/mnt/data/combined_backlog/kyra_master_backlog_refined_20260104-223248Z.csv",
+  "new_items_added": 0,
+  "items_removed_vs_prev": 0,
+  "sources": [
+    "kyra_profit_projection_v1.csv",
+    "kyra_gap_backlog_v1.csv",
+    "coding_plan_v1.csv",
+    "ophi_overlay_buildpack_v1.zip:OphiBox_BOM_v1.csv",
+    "kyra_emerging_pack_v1.zip:emerging_backlog_v1.csv",
+    "kyra_server_edition_kit_v1.zip:backlog/kyra_server_backlog_v1.csv",
+    "kyra_backlog_kit_v45.zip:data/backlog_delta_v45.csv"
+  ]
+}

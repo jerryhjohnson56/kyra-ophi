@@ -1,0 +1,5 @@
+[workspace]
+members=["server/gateway"]
+resolver="2"
+[workspace.package]
+edition="2021"

@@ -1,0 +1,67 @@
+{
+  "tools": [
+    {
+      "id": "pool.status",
+      "run": [
+        "python3",
+        "scripts/pool_api.py",
+        "status"
+      ]
+    },
+    {
+      "id": "pool.once",
+      "run": [
+        "python3",
+        "scripts/pool_api.py",
+        "once"
+      ]
+    },
+    {
+      "id": "pool.start",
+      "run": [
+        "python3",
+        "scripts/pool_api.py",
+        "start"
+      ]
+    },
+    {
+      "id": "pool.stop",
+      "run": [
+        "python3",
+        "scripts/pool_api.py",
+        "stop"
+      ]
+    },
+    {
+      "id": "pr.list",
+      "run": [
+        "gh",
+        "pr",
+        "list",
+        "--state",
+        "open",
+        "--json",
+        "number,title,headRefName,webUrl"
+      ]
+    },
+    {
+      "id": "claim.next",
+      "run": [
+        "python3",
+        "scripts/claim_item.py",
+        "--manifest",
+        "manifest.json",
+        "--root",
+        "."
+      ]
+    },
+    {
+      "id": "logs.tail",
+      "run": [
+        "bash",
+        "-lc",
+        "tail -n 400 logs/pool_loop.out || true"
+      ]
+    }
+  ]
+}

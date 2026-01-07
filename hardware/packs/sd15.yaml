@@ -1,0 +1,7 @@
+id: sd15
+name: Stable Diffusion 1.5 Pack
+includes:
+  - sd15_fp16
+  - controlnet_canny_light
+  - controlnet_depth_light
+size_estimate_gb: 6

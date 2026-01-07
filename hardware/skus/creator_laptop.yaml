@@ -1,0 +1,18 @@
+id: kyra_creator_laptop
+name: Kyra Creator Laptop
+segment: consumer_creator
+cpu: 8-core (Apple M-series or AMD/Intel 12th+)
+gpu: iGPU or dGPU (>= 8GB VRAM)
+ram_gb: 16
+storage_gb: 1024
+wireless: ["WiFi 6/6E", "BT 5.2"]
+ports: ["USB-C", "USB-A", "HDMI/DP"]
+warranty_months: 24
+os_channel: "stable"
+packs:
+  - base_models
+  - creator_base
+  - sd15
+extras: ["1080p/IR depth camera", "Mic array", "Color-calibrated display"]
+power_profile_default: balanced
+power_profiles: ["balanced", "creator_boost", "lite"]

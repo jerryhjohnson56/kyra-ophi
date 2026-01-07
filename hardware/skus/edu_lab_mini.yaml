@@ -1,0 +1,18 @@
+id: kyra_edu_lab_mini
+name: Kyra EDU Lab Mini
+segment: education
+cpu: 4–6 core mini PC
+gpu: iGPU
+ram_gb: 8
+storage_gb: 256
+wireless: ["WiFi 6/6E", "BT 5.2"]
+ports: ["USB-C", "USB-A", "HDMI/DP"]
+warranty_months: 24
+os_channel: "stable"
+packs:
+  - base_models
+  - creator_base
+  - sd15
+extras: ["Kensington lock", "VESA mount"]
+power_profile_default: balanced
+power_profiles: ["balanced", "creator_boost", "lite"]

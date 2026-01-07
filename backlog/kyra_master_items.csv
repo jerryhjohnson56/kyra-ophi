@@ -1,0 +1,2 @@
+id,domain,area,title,language,file_type,path,target_file,entrypoint,build_cmd,test_cmd,conversion_phase,order,deps,description
+K2001,lang,Kyra Language & VM,module 001,rust,library,stubs/core/lang/x,src/lib.rs,src/lib.rs,cargo test -q,cargo test,1,101,,demo
