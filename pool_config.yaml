@@ -1,19 +1,14 @@
 github:
   owner: jerryhjohnson56
   repo: kyra-ophi
-  # If GH_TOKEN is exported, the worker/gh CLI will pick it up automatically.
-  # Otherwise run: gh auth login
 
 models:
   provider: ollama
   name: "qwen2.5-coder:7b"
-  # optional fallbacks the worker can try if the first fails
-  fallbacks:
-    - "deepseek-coder:6.7b"
-    - "llama3.1:8b"
+  fallbacks: ["deepseek-coder:6.7b", "llama3.1:8b"]
 
 worker:
-  max_loops: 1          # change to a bigger number or remove for continuous loop
+  max_loops: 1
   sleep_s: 10
   branch_prefix: "worker"
   create_pr: true
@@ -28,7 +23,6 @@ worker:
     c: ["make","-s"]
   languages:
     default: python
-    # simple regex-like hints by item title/path; adjust anytime
     overrides:
       "p3|runtime|vm|jit|perf": rust
       "p4|devices|firmware|daemon|ffi|capi|driver": c
@@ -39,13 +33,12 @@ worker:
       "p23|accel|fabric|backend|test": c
 
 guardrails:
-  forbid_code_fences: true             # models must not return ``` fences
-  strip_fences_on_save: true           # worker removes any it sees
+  forbid_code_fences: true
+  strip_fences_on_save: true
   normalize_newlines: true
   max_patch_lines: 500
 
 ci_policies:
-  # gate rules that align with included workflows
   require_tests_exist: true
   forbid_large_files_mb: 50
   run_linters:
